@@ -1,7 +1,8 @@
 import io 
-from pytube import Youtube 
+from pytube import YouTube
 
 
 def convertir_video(url):
-    yt = Youtube(url)
+    yt = YouTube(url)
+    yt.streams.filter(res="1080p", fps="60fps")
     
