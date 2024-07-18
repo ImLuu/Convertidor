@@ -1,8 +1,6 @@
-import io 
 from pytube import YouTube
 
-
-def convertir_video(url):
-    yt = YouTube(url)
-    yt.streams.filter(res="1080p", fps="60fps")
-    
+url = "https://www.youtube.com/watch?v=WPTap0YCWI8"
+yt = YouTube(url)
+yt = yt.streams.get_audio_only()
+yt.download()
